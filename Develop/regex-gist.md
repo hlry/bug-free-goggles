@@ -12,7 +12,11 @@ The following regular expression can be used to verify that user input is a vali
 
 But how?
 
-Read on to find out. Each character of this regular expression ensures that the user has entered characters before and after an "@" symbol, and that the characters after the "@" symbol are a domain (e.g., hotmail.com, aol.com, yahoo.co.uk, @googlemail.com, etc.).
+Read on to find out. 
+
+Regex is sort of like a puzzle that you have to decode.
+
+Each character of this regular expression ensures that the user has entered characters before and after an "@" symbol, and that the characters after the "@" symbol are a domain (e.g., hotmail.com, aol.com, yahoo.co.uk, @googlemail.com, etc.).
 
 ## Table of Contents
 
@@ -29,8 +33,16 @@ Read on to find out. Each character of this regular expression ensures that the 
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+The email detection regex /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ can be broken down into components.
 
 ### Anchors
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "^" and "$" symbols can be anchors.
+
+The carrot symbol "^" matches a string that starts with the symbol following the "^" symbol.
+
+The money symbol "$" matches a string that ends with the symbol preceding the "$" symbol.
+
+Here, this means that the anchors "^" and "$" will match a string beginning with the "(" following the carot "^" symbol and ending with the ")" preceding the dollar "$" symbol.
 
 ### Quantifiers
 
