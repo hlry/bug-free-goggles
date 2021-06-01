@@ -145,6 +145,16 @@ A back reference can be used as a sort of bookmark in order to label part of a r
 Here, the backslash "\" symbol is used, but it does not follow parentheses and so it is not being used as a back reference.
 
 ### Look-ahead and Look-behind
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , there are no look-aheads or look-behinds.
+
+Look-aheads and look-behinds match one thing only if it is followed by another thing (required bit), even if the required bit isn't part of the regex match.
+
+In general, look-aheads and look-behinds are represented by recognizable combinations of parentheses, question mark, and equal signs or greater/less than signs.
+
+For example, look-aheads and look-behinds will look like (?=) or (?<=). With characters added, it could be x(?=y) or (?=y)x. 
+In this example, the "y" could be the required thing, so the regex only matches x if it is preceded or followed by y, but the y would not be a part of the overall regex match.
+
+Here, none of this syntax is present in the email regex.
 
 ## Author
 
