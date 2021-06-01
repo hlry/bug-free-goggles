@@ -54,4 +54,8 @@ Read on to find out. Each character of this regular expression ensures that the 
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+The author of this gist is an in-house attorney but this gist is expressing personal views and is not legal advice or representing the views of my employer.
+
+The author created this regex tutorial as part of a javascript full stack immersion program.
+
+For any questions about this gist please contact the author on GitHub: [HLRY](https://github.com/hlry) 
