@@ -36,7 +36,7 @@ Each character of this regular expression ensures that the user has entered char
 The email detection regex /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ can be broken down into components.
 
 ### Anchors
-Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "^" and "$" symbols can be anchors.
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "^" and "$" symbols are anchors.
 
 The carrot symbol "^" matches a string that starts with the symbol following the "^" symbol.
 
@@ -46,7 +46,7 @@ Here, this means that the anchors "^" and "$" will match a string beginning with
 
 ### Quantifiers
 
-Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "{}" symbols can be anchors.
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "{}" symbols are anchors.
 
 Other quantifiers such as "*" and "?" are not used in this regex expression.
 
@@ -56,7 +56,7 @@ Here, that means that for "{2,6}", there is a lower limit of 2 and an upper limi
 
 ### OR Operator
 
-Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "[]" symbols can be "OR" operators.
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "[]" symbols are "OR" operators.
 
 Another OR operator in regex, "|", is not used here.
 
@@ -67,6 +67,22 @@ Here, the first OR operator, "[a-z0-9_\.-]" indicates that the preceding compone
 Similarly, for "[\da-z\.-]" and "[a-z\.]", the components preceding the square brackets are followed by any of the components within the square brackets, without capturing those components.
 
 ### Character Classes
+
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "\d" and "." symbols are anchors.
+
+Another two character classes in regex, "\w" and "\s", are not used here. Neither are the character class negations "\D", "\S", or "\W".
+
+In general, the backslash lowercase d component, "\d", matches a single character that is a digit. You can play with matching numbers appearing in test strings here: https://regex101.com/r/cO8lqs/4
+
+Here, in the context of "\d" being located within the square brackets, "[\da-z\.-]" (an OR Operator -- see above) tells us that it can match with a single character that is a digit or any other the other components in the square brackets.
+
+This regex also uses "." In general, the "." character class can match with any character.
+
+Here, "." is used within square bracket OR operators before the "@" symbol (see "([a-z0-9_\.-]+)@"), within square brackets after the "@" symbol, (see "@([\da-z\.-]+)"), and within square brackets after a dot after the preceding square brackets, (see ".([a-z\.]{2,6})").
+
+This will match with any symbol before the "@" symbol, then after the "@" symbol, and then after a . following the preceding any matching symbol after the "@" symbol. 
+
+In other words, it could match something like "a@4.com", which could conceivably be an email address.
 
 ### Flags
 
