@@ -124,6 +124,12 @@ Each of these bracket expressions contains "a-z" and could match a string includ
 Interestingly, the first bracket expression A includes "0-9" within the brackets, and so the text prior to the "@" sign in an email address could match onto any numerical character in addition to string letters.
 
 ### Greedy and Lazy Match
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , there are no greedy or lazy operators.
+
+In general, the quantifiers (* + {}) are greedy operators. 
+
+The asterisk or star symbol is not present in this regex, and the curly brackets alone would not be a greedy operator.
+
 
 ### Boundaries
 
