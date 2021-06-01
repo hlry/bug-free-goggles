@@ -130,8 +130,10 @@ In general, the quantifiers (* + {}) are greedy operators.
 
 The asterisk or star symbol is not present in this regex, and the curly brackets alone would not be a greedy operator.
 
-
 ### Boundaries
+In general, boundaries are represented by backslash lowercase b "\b" or backslash uppercase B "\B".
+
+These characters are not present in this email regex.
 
 ### Back-references
 
