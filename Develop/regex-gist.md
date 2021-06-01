@@ -46,7 +46,25 @@ Here, this means that the anchors "^" and "$" will match a string beginning with
 
 ### Quantifiers
 
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "{}" symbols can be anchors.
+
+Other quantifiers such as "*" and "?" are not used in this regex expression.
+
+In general, the "{" and "}" quantifiers following the pattern "abc{2,5}" match a string that has ab followed by 2 up to 5 c.
+
+Here, that means that for "{2,6}", there is a lower limit of 2 and an upper limit of 6 of the preceding component.
+
 ### OR Operator
+
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "[]" symbols can be "OR" operators.
+
+Another OR operator in regex, "|", is not used here.
+
+In general, the "[" and "]" OR operators indicate that pattern "a[bc]" matches a string that is followed by b or c, but without capturing b or c.
+
+Here, the first OR operator, "[a-z0-9_\.-]" indicates that the preceding components "/^(" are followed by components any of the components included within the square brackets, but the contents of the square brackets are not captured.
+
+Similarly, for "[\da-z\.-]" and "[a-z\.]", the components preceding the square brackets are followed by any of the components within the square brackets, without capturing those components.
 
 ### Character Classes
 
