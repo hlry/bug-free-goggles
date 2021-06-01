@@ -86,6 +86,12 @@ In other words, it could match something like "a@4.com", which could conceivably
 
 ### Flags
 
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , there are no regex flags.
+
+In general, regex flags are indicated with a "g" for global, an "m" for multi-line, or an "i" for insensitive (to make the match case-insensitive). 
+
+These characters are not present in this email matching regex.
+
 ### Grouping and Capturing
 
 ### Bracket Expressions
