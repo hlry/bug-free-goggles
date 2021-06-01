@@ -108,6 +108,21 @@ For example, in "xyz@abc.com," the group A would match with "xyz," group B would
 
 ### Bracket Expressions
 
+
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , the "[" and "]" symbols indicate the bracket expressions.
+
+In general, a string such as "abc" within brackets (e.g., [abc]), matches a string of any or either of the variables, alone or several in combination. 
+For example, it could match "a" or "a b" or "a c." Similarly, a bracket containing 0-9 (i.e., [0-9]), could contain a numeral character -- alone or several in any combination -- between 0 and 9.
+
+Here, there are three bracket expressions:
+- [a-z0-9_\.-] -- bracket expression A
+- [\da-z\.-] -- bracket expression B
+- [a-z\.] -- bracket expression C
+
+Each of these bracket expressions contains "a-z" and could match a string including one or more a-z letters in any order.
+
+Interestingly, the first bracket expression A includes "0-9" within the brackets, and so the text prior to the "@" sign in an email address could match onto any numerical character in addition to string letters.
+
 ### Greedy and Lazy Match
 
 ### Boundaries
