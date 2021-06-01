@@ -6,7 +6,13 @@ The following sectins will walk through the specific components of the regex and
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The following regular expression can be used to verify that user input is a valid email address: 
+
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+
+But how?
+
+Read on to find out. Each character of this regular expression ensures that the user has entered characters before and after an "@" symbol, and that the characters after the "@" symbol are a domain (e.g., hotmail.com, aol.com, yahoo.co.uk, @googlemail.com, etc.).
 
 ## Table of Contents
 
