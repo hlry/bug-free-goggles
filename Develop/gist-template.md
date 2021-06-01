@@ -1,6 +1,8 @@
-# Title (replace with your title)
+# Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+This gist provides an explanation of a regular expression or "regex."
+
+The following sectins will walk through the specific components of the regex and what they do.
 
 ## Summary
 
