@@ -94,6 +94,18 @@ These characters are not present in this email matching regex.
 
 ### Grouping and Capturing
 
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , there are three capturing groups.
+
+In general, parenthesis are used to create a capturing group. When there is a string, a group can access the values of the string in the form of an array.
+
+Here, the following three groups are captured:
+- ([a-z0-9_\.-]+) -- group A, preceding "@" symbol
+- ([\da-z\.-]+) -- group B, following "@" symbol
+- ([a-z\.]{2,6}) -- group C, following "." after group B
+
+This matches onto the syntax of an email address. 
+For example, in "xyz@abc.com," the group A would match with "xyz," group B would match with "abc," and group C would match with "com".
+
 ### Bracket Expressions
 
 ### Greedy and Lazy Match
