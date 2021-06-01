@@ -136,6 +136,13 @@ In general, boundaries are represented by backslash lowercase b "\b" or backslas
 These characters are not present in this email regex.
 
 ### Back-references
+Within /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ , there are no back-references.
+
+In general, back-references are indicated by a backslach following parentheses, such as ([abc])/1, or ([abc])([de])\2\1, or (?<foo>[abc])\k.
+
+A back reference can be used as a sort of bookmark in order to label part of a regex and refer to it later. It could be labelled with a number ("1" or "2") or even with a name, such as <foo>.
+
+Here, the backslash "\" symbol is used, but it does not follow parentheses and so it is not being used as a back reference.
 
 ### Look-ahead and Look-behind
 
